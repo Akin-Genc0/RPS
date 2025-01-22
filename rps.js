@@ -61,9 +61,17 @@ function playRound(humanChoice, computerChoice) {
 
 
 
-for (let round = 1; round <= 4; round++) {
-    alert(`Round ${round}`);
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
-    playRound(humanChoice, computerChoice);
-}
+const btn1 = document.querySelector("#btn1");
+btn1.addEventListener("click", function() {
+    console.log(playRound("Rock" , getComputerChoice()));
+});
+
+const btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", function() {
+    console.log(playRound("Paper", getComputerChoice()));
+});
+
+const btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", function() {
+    console.log((playRound("Sissors" , getComputerChoice())));
+});
