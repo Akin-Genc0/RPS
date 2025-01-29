@@ -39,27 +39,38 @@ function playRound(humanChoice, computerChoice) {
 
     
     humanChoice = humanChoice.toLowerCase();
-  
+   
 
     if (humanChoice === computerChoice){
-        alert("Its a tie");
+       message("It's a tie " , "Try Again");
     }else if (humanChoice === "rock" && computerChoice === "paper") {
         humanScore++;
-        alert(`You win! Your score: ${humanScore}`);
+        message("You win " ,humanScore);
     }else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++;
-        alert(`You win! Your score: ${humanScore}`);
+        message("You win ",humanScore)
     }else if (humanChoice === "scissor" && computerChoice === "paper") {
         humanScore++;
-        alert(`You win! Your score: ${humanScore}`);
+        message("You win " ,humanScore);
     }else{
         computerScore++;
-        alert(`You lose! Computer score: ${computerScore}`);
+        message("You Lose " , computerScore);
     }
 
 }
-
-
+ 
+function message (text, score) { // has one pram to store message
+    let res = document.getElementById("results"); //getting id of div
+    let b = document.getElementById("try"); //getting id of div
+    res.innerHTML = text + score; // setting content to text prama and displaying the score
+   
+    if(score >= 5) {
+        res.innerHTML = "Winner"; 
+        
+     } 
+     
+    
+   }
 
 const btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
@@ -75,3 +86,10 @@ const btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", function() {
     console.log((playRound("Sissors" , getComputerChoice())));
 });
+
+// create logic for loop fucntion and use the message fucntion i think to sipaly who the winner is 
+
+function checkWin(humanScore, computerScore) {
+    let r = document.getElementById("winner");
+   
+}
