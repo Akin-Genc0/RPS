@@ -4,7 +4,7 @@ let computerScore = 0;
 
 
 function getComputerChoice() {
-let computerChoice = Math.floor(Math.random() *2);
+let computerChoice = Math.floor(Math.random() *3);
 
 if (computerChoice === 0){
     return "rock";
@@ -61,17 +61,22 @@ function playRound(humanChoice, computerChoice) {
  
 function message (text, score) { // has one pram to store message
     let res = document.getElementById("results"); //getting id of div
-    let b = document.getElementById("try"); //getting id of div
     res.innerHTML = text + score; // setting content to text prama and displaying the score
    
-    if(score >= 5) {
-        res.innerHTML = "Winner"; 
-        
-     } 
+    if(humanScore >= 5) { //checks scores displays text and colour
+        res.innerHTML = "You Win";
+        res.style.color = "green"; 
+
+     } else if(computerScore >= 5) {
+        res.innerHTML = "You Lose"; 
+        res.style.color = "red"; 
+     }
      
     
    }
 
+
+   
 const btn1 = document.querySelector("#btn1");
 btn1.addEventListener("click", function() {
     console.log(playRound("Rock" , getComputerChoice()));
@@ -86,10 +91,3 @@ const btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", function() {
     console.log((playRound("Sissors" , getComputerChoice())));
 });
-
-// create logic for loop fucntion and use the message fucntion i think to sipaly who the winner is 
-
-function checkWin(humanScore, computerScore) {
-    let r = document.getElementById("winner");
-   
-}
