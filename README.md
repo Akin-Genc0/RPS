@@ -1,4 +1,4 @@
-# Rock Paper Scissors 🎮✊✋✌️
+# Rock Paper Scissors 
 
 This is a simple **Rock Paper Scissors** game built to refresh my **JavaScript** skills. The project focuses on basic **game logic**, **event handling**, and **DOM manipulation** with a clean, minimal UI.
 
