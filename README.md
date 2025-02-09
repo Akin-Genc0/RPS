@@ -7,7 +7,7 @@ This is a simple **Rock Paper Scissors** game built to refresh my **JavaScript**
 ## Features
 
 - Clickable buttons for **Rock**, **Paper**, and **Scissors**.
-- **Randomized computer moves** for fair gameplay.
+- **Randomised computer moves** for fair gameplay.
 - Displays **game results** instantly.
 
 ---
